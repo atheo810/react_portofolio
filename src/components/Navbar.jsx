@@ -1,12 +1,13 @@
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const menus = [
-    { name: "Home" },
-    { name: "Activity" },
-    { name: "Resource" },
-    { name: "About" },
+    { name: "Home", link: "/" },
+    { name: "Activity", link: "/activity" },
+    { name: "Resource", link: "/resource" },
+    { name: "About", link: "/about" },
   ];
   const [nav, setNav] = useState(true);
   const handleNav = () => {
@@ -18,7 +19,9 @@ export default function Navbar() {
       <ul className="hidden md:flex ">
         {menus.map((menu) => (
           <>
-            <li className="p-4">{menu.name}</li>
+            <li className="p-4">
+              <Link to={menu.link}>{menu.name}</Link>
+            </li>
           </>
         ))}
       </ul>
@@ -38,7 +41,9 @@ export default function Navbar() {
         <ul className="p-4 uppercase">
           {menus.map((menu) => (
             <>
-              <li className="p-4">{menu.name}</li>
+              <li className="p-4">
+                <Link to={menu.link}>{menu.name}</Link>
+              </li>
             </>
           ))}
         </ul>
