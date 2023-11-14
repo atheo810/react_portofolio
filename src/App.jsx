@@ -1,17 +1,11 @@
-import Express from "./components/Express";
-import Hero from "./components/Hero";
-import Laravel from "./components/Laravel";
 import Navbar from "./components/Navbar";
-import ReactLib from "./components/ReactLib";
+import { Outlet } from "react-router-dom";
 
 export default function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Laravel />
-      <Express />
-      <ReactLib />
+      <Outlet />
     </>
   );
 }
