@@ -4,7 +4,9 @@ export default function Hero() {
   return (
     <div className="text-white">
       <div className="max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center">
-        <p className="text-[#00df9a] font-bold p-2">Welcome to my Website</p>
+        <p className="text-[#859DFF] font-bold text-xl p-2">
+          Welcome to my Website
+        </p>
         <h1 className="md:text-7xl sm:text-6xl text-4xl font-bold md:py-6">
           Atheo Santosa
         </h1>
@@ -24,7 +26,7 @@ export default function Hero() {
             backSpeed={140}
           />
         </div>
-        <button className="bg-[#00df9a] w-[200px] rounded-md font-bold my-6 mx-auto py-3 text-black">
+        <button className="bg-[#1A27BA] w-[200px] rounded-md font-bold my-6 mx-auto py-3 text-white">
           Get Started
         </button>
       </div>
