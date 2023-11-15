@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="">
+    <footer className="pt-4">
       <div className="flex justify-around max-sm:flex-col md:flex-row">
         <div className="flex flex-col max-sm:w-full items-center md:w-[40%] py-3 mx-3">
           <h1 className="text-white text-2xl uppercase">reach me more</h1>
