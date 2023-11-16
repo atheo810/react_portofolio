@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="text-white flex max-md:flex-col lg:flex-row justify-center  h-[700px] items-center max-sm:flex-col ">
+    <main className="text-white flex max-md:flex-col lg:flex-row justify-center  h-[700px] items-center max-sm:flex-col ">
       <div className="flex flex-col mx-2 max-sm:w-full md:w-[50%] max-lg:w-[800] items-center md:h-full justify-center">
         <h1 className="md:text-4xl sm:text-3xl font-bold py-2">About me</h1>
         <p className="md:text-2xl sm:text-lg  py-2 max-sm:mx-2">
@@ -18,6 +18,6 @@ export default function About() {
           height={700}
         />
       </div>
-    </div>
+    </main>
   );
 }
