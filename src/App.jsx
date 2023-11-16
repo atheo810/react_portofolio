@@ -1,13 +1,11 @@
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import { Outlet } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+import router from "./routers/index";
+import "./index.css";
 
 export default function App() {
   return (
     <>
-      <Navbar />
-      <Outlet />
-      <Footer />
+      <RouterProvider router={router} />
     </>
   );
 }
