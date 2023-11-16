@@ -4,27 +4,25 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const menus = [
-    { name: "Home", link: "/" },
-    { name: "Activity", link: "/activity" },
-    { name: "Resource", link: "/resource" },
-    { name: "About", link: "/about" },
+    { id: 1, name: "Home", link: "/" },
+    { id: 2, name: "Activity", link: "/activity" },
+    { id: 3, name: "Resource", link: "/resource" },
+    { id: 4, name: "About", link: "/about" },
   ];
   const [nav, setNav] = useState(true);
   const handleNav = () => {
     setNav(!nav);
   };
   return (
-    <nav className="flex justify-between items-center text-white h-24 max-w-[1920px] mx-auto px-4">
-      <h1 className="w-full text-3xl font-bold text-[#859DFF]">Atheo Dev</h1>
+    <nav className="flex justify-around items-center text-white h-24 max-w-full mx-auto px-4">
+      <h1 className="text-3xl font-bold text-[#859DFF]">Atheo Dev</h1>
       <ul className="hidden md:flex ">
         {menus.map((menu) => (
-          <>
-            <li className="p-4">
-              <Link className="font-normal text-lg uppercase" to={menu.link}>
-                {menu.name}
-              </Link>
-            </li>
-          </>
+          <li key={menu.id} className="p-4 hover:underline">
+            <Link className="font-normal text-lg uppercase" to={menu.link}>
+              {menu.name}
+            </Link>
+          </li>
         ))}
       </ul>
       <div onClick={handleNav} className="block md:hidden">
@@ -40,13 +38,11 @@ export default function Navbar() {
         <h1 className="w-full text-3xl font-bold text-[#859DFF] m-4">
           Atheo Dev
         </h1>
-        <ul className="p-4 uppercase">
+        <ul className="p-4 uppercase ">
           {menus.map((menu) => (
-            <>
-              <li className="p-4">
-                <Link to={menu.link}>{menu.name}</Link>
-              </li>
-            </>
+            <li key={menu.id} className="p-4 hover:underline">
+              <Link to={menu.link}>{menu.name}</Link>
+            </li>
           ))}
         </ul>
       </div>
