@@ -10,6 +10,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Error from "./pages/Error.jsx";
 import About from "./pages/About.jsx";
 import PageHome from "./pages/PageHome.jsx";
+import PageResource from "./pages/PageResource.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/resource",
+        element: <PageResource />,
       },
     ],
   },
