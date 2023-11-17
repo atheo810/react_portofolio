@@ -9,7 +9,7 @@ import PageHome from "../pages/PageHome.jsx";
 import PageResource from "../pages/PageResource.jsx";
 import Layouts from "../layouts/Layouts.jsx";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter([  
   {
     path: "/",
     element: <Layouts />,
