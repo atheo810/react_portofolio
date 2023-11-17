@@ -14,7 +14,7 @@ export default function Navbar() {
     setNav(!nav);
   };
   return (
-    <nav className="flex justify-around items-center text-white h-24 max-w-full mx-auto px-4">
+    <nav className="flex justify-around items-center text-white h-24 max-w-full mx-auto px-4 sticky top-0 bg-[#0A0000]">
       <h1 className="text-3xl font-bold text-[#859DFF]">Atheo Dev</h1>
       <ul className="hidden md:flex ">
         {menus.map((menu) => (
@@ -31,7 +31,7 @@ export default function Navbar() {
       <div
         className={
           !nav
-            ? "fixed top-0 left-0 w-[60%] h-full border-r border-r-gray-900 bg-[#0A0000] ease-in-out duration-500"
+            ? "fixed top-0 left-0 w-[60%] h-full border-r border-r-gray-900 bg-[#0A0000] ease-in-out duration-500 z-50"
             : "fixed left-[-100%]"
         }
       >
